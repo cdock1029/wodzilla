@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "213969892665",
+    "firebase_url": "https://wodzilla-71373.firebaseio.com",
+    "project_id": "wodzilla-71373",
+    "storage_bucket": "wodzilla-71373.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213969892665:android:9018abd65fac176f",
+        "android_client_info": {
+          "package_name": "com.example.wodzilla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213969892665-1imel84t1a1h7qo3ekc9csqp68fge0sd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wodzilla",
+            "certificate_hash": "14aa5a40ba617436eaa1198da3c52cc9e3fe13da"
+          }
+        },
+        {
+          "client_id": "213969892665-fo3h745ldvriefromnliboo37lnif1og.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4hHjSby-sc9GBmr4nh99zwNFLQhen3T0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213969892665-fo3h745ldvriefromnliboo37lnif1og.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
