@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wodzilla/interval_timer.dart';
+import 'package:wodzilla/stopwatch_timer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() => runApp(new MyApp());
@@ -13,9 +15,10 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.red, accentColor: Colors.blueAccent),
       home: new MyHomePage(title: 'Wodzilla'),
       routes: {
-        "test": (BuildContext ctx) {
-          return Scaffold(body: Center(child: Text("Test page")));
-        }
+        "test": (BuildContext ctx) =>
+            Scaffold(body: Center(child: Text("Test page"))),
+        "interval_timer": (BuildContext ctx) => IntervalTimer(),
+        "stopwatch_timer": (BuildContext ctx) => StopwatchTimer()
       },
     );
   }
@@ -26,12 +29,12 @@ class MyHomePage extends StatefulWidget {
 
   final String title;
   final _items = [
-    {"icon": Icons.watch, "value": "Stop watch"},
-    {"icon": Icons.watch_later, "value": "Timer"},
-    {"icon": Icons.plus_one, "value": "Counter"},
-    {"icon": Icons.fitness_center, "value": "Exercises"},
-    {"icon": Icons.import_contacts, "value": "Archive"},
-    {"icon": Icons.edit, "value": "New workout"},
+    {"icon": Icons.watch, "value": "Stop watch", "route": "stopwatch_timer"},
+    {"icon": Icons.watch_later, "value": "Timer", "route": "interval_timer"},
+    {"icon": Icons.plus_one, "value": "Counter", "route": "test"},
+    // {"icon": Icons.fitness_center, "value": "Exercises", "route": "timer"},
+    // {"icon": Icons.import_contacts, "value": "Archive", "route": "timer"},
+    // {"icon": Icons.edit, "value": "New workout", "route": "timer"},
   ];
 
   @override
@@ -58,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     iconSize: 85.0,
                     tooltip: item['value'],
                     onPressed: () {
-                      Navigator.of(context).pushNamed("test");
+                      Navigator.of(context).pushNamed(item['route']);
                     },
                   ),
                   Text(
