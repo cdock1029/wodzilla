@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class RepCounter extends StatefulWidget {
+class Counter extends StatefulWidget {
   @override
-  _RepCounterState createState() => _RepCounterState();
+  _CounterState createState() => _CounterState();
 }
 
-class _RepCounterState extends State<RepCounter> {
+class _CounterState extends State<Counter> {
   int _count;
 
   @override
@@ -50,32 +50,6 @@ class _RepCounterState extends State<RepCounter> {
             ),
           ),
         ),
-
-        // child: Stack(
-        //   children: <Widget>[
-        //     Center(
-        //       child: Padding(
-        //         padding: EdgeInsets.all(32.0),
-        //         child: Container(
-        //           decoration: BoxDecoration(
-        //             border: Border.all(width: 8.0, color: Colors.white),
-        //             shape: BoxShape.circle,
-        //             color: Colors.tealAccent.shade700,
-        //           ),
-        //         ),
-        //       ),
-        //     ),
-        //     Center(
-        //       child: Text(
-        //         "18",
-        //         style: TextStyle(
-        //             fontSize: 95.0,
-        //             color: Colors.indigo.shade700,
-        //             fontWeight: FontWeight.bold),
-        //       ),
-        //     ),
-        //   ],
-        // ),
       ),
     );
   }

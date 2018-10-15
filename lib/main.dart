@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wodzilla/interval_timer.dart';
-import 'package:wodzilla/rep_counter.dart';
+import 'package:wodzilla/counter.dart';
 import 'package:wodzilla/stopwatch_timer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             Scaffold(body: Center(child: Text("Test page"))),
         "interval_timer": (BuildContext ctx) => IntervalTimer(),
         "stopwatch_timer": (BuildContext ctx) => StopwatchTimer(),
-        "rep_counter": (BuildContext ctx) => RepCounter(),
+        "rep_counter": (BuildContext ctx) => Counter(),
       },
     );
   }
