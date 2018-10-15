@@ -52,42 +52,40 @@ class _StopwatchTimerState extends State<StopwatchTimer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Stopwatch")),
-      body: ListView(
-        children: [
-          // stopwatch
-          Padding(
-              padding: EdgeInsets.symmetric(horizontal: 32.0),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 32.0),
-                    child: Text(
-                      _seconds.toStringAsFixed(2),
-                      style: TextStyle(
-                          fontSize: 75.0, fontWeight: FontWeight.bold),
-                    ),
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.all(32.0),
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 48.0),
+                child: Text(
+                  _seconds.toStringAsFixed(2),
+                  style: TextStyle(fontSize: 90.0, fontWeight: FontWeight.bold),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  RaisedButton(
+                    child: Text("RESET"),
+                    onPressed: resetTimer,
+                    color: Colors.deepPurpleAccent.shade400,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      RaisedButton(
-                          child: Text("Reset"),
-                          onPressed: resetTimer,
-                          color: Colors.blue.shade200),
-                      RaisedButton(
-                          color: isActive()
-                              ? Colors.redAccent
-                              : Colors.greenAccent,
-                          child: Text(isActive() ? "Stop" : "Start"),
-                          onPressed: () {
-                            isActive() ? stopTimer() : startTimer();
-                          })
-                    ],
-                  ),
+                  RaisedButton(
+                      color: isActive()
+                          ? Colors.redAccent.shade400
+                          : Colors.tealAccent.shade700,
+                      child: Text(isActive() ? "STOP" : "START"),
+                      onPressed: () {
+                        isActive() ? stopTimer() : startTimer();
+                      })
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
-              )),
-        ],
+              ),
+            ],
+            mainAxisAlignment: MainAxisAlignment.start,
+          ),
+        ),
       ),
     );
   }
