@@ -77,7 +77,7 @@ class _IntervalState extends State<IntervalTimer> {
   @override
   void initState() {
     super.initState();
-    initial = curr = IntervalStateMachine(sets: 1, rest: 0, work: 0);
+    initial = curr = IntervalStateMachine(sets: 1, work: 1, rest: 0);
   }
 
   void reset() {
